@@ -183,7 +183,7 @@ const App = () => {
   */
   useEffect(() => {
     checkIfWalletIsConnected();
-  }, [])
+  })
 
   // Render Methods
   const renderNotConnectedContainer = () => (
@@ -215,12 +215,12 @@ const renderSupply = () =>(
           {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
           {renderSupply()}
           <p className="sub-text">
-           🌊 <a 
+           <a 
               className="footer-text"
             href={OPENSEA_LINK + OPENSEA_COLLECTION}
             target="_blank"
             rel="noopener noreferrer"
-          >View Collection on OpenSea</a>
+          >View Collection on OpenSea</a><span role="img" aria-label="wave">&#127754;</span>
           </p>
         </div>
         
